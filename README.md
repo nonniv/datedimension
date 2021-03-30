@@ -4,6 +4,7 @@ Date dimension for SQL Server with Icelandic hollidays
 The dimension is populated with stored procedure that uses some table value functions.
 
 Following code can be run daily:
+```SQL
 
 IF EXISTS (SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE='BASE TABLE'  AND TABLE_NAME='DimDate')
 	DROP TABLE [dbo].[DimDate]
