@@ -38,7 +38,7 @@ BEGIN
 		union all
 		select Date + 1
 		from mangal
-		where date + 1 < dateadd(day,7,convert(datetime,cast(@year as varchar) + '.' + '08.06',102))
+		where date + 1 < dateadd(day,7,convert(datetime,cast(@year as varchar) + '.' + '08.07',102))
 	)
 	insert into @Results(FirstMondayofAugust) select  m.Date from mangal m where datename(dw,m.Date) = 'Monday'
 	-- Return the result of the function
