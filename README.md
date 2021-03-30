@@ -8,8 +8,8 @@ Following code can be run daily:
 
 IF EXISTS (SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE='BASE TABLE'  AND TABLE_NAME='DimDate')
 	DROP TABLE [dbo].[DimDate]
-
 GO 
+
 CREATE TABLE [dbo].[DimDate](
 	[DateKey] [int] NOT NULL,
 	[DateKeyStr] [varchar](8) NULL,
