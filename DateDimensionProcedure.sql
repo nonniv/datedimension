@@ -9,13 +9,11 @@ if exists( select * from sysobjects where id = object_id(N'PopulateDimDate') AND
 GO
 
 Create procedure [dbo].[PopulateDimDate]
-     @StartDate datetime=NULL
-	 ,@EndDate datetime=NULL
+     @StartDate datetime = NULL
+     ,@EndDate datetime = NULL
+     ,@nrYearsInFuture int = 40
  as 
  begin
-
-	 declare @nrYearsInFuture int
-	 set @nrYearsInFuture = 40
 
 	if( @StartDate is null )
 	begin
